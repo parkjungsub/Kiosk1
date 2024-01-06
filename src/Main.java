@@ -37,8 +37,8 @@ public class Main {
                     System.out.println(menuTest.getScreenMenu(MenuIndex.CART));
                     option =sc.nextInt();// 장바구니에 담을 것인지 아닌지 입력 받기
                     System.out.println(menuTest.getScreenMenu(MenuIndex.ORDER));
-                    orderList.add(list.getBurgerList(select -1)); // 장바구니에 선택한 리스트 넣기
                     if(option == 1){
+                        orderList.add(list.getBurgerList(select -1)); // 장바구니에 선택한 리스트 넣기
                         sum += orderList.get(count).getPrice();//장바구니에 담긴 금액 합계 더하기
                         System.out.println("장바구니에 추가되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
@@ -54,8 +54,8 @@ public class Main {
                     System.out.println(menuTest.getScreenMenu(MenuIndex.CART));
                     option = sc.nextInt();// 장바구니에 담을 것인지 아닌지 입력 받기
                     System.out.println(menuTest.getScreenMenu(MenuIndex.ORDER));
-                    orderList.add(list.getshakeList(select - 1));// 장바구니에 선택한 리스트 넣기
                     if(option == 1){
+                        orderList.add(list.getshakeList(select - 1));// 장바구니에 선택한 리스트 넣기
                         sum += orderList.get(count).getPrice(); //장바구니에 담긴 금액 합계 더하기
                         System.out.println("장바구니에 추가되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
@@ -71,8 +71,8 @@ public class Main {
                     System.out.println(menuTest.getScreenMenu(MenuIndex.CART));
                     option = sc.nextInt(); // 장바구니에 담을 것인지 아닌지 입력 받기
                     System.out.println(menuTest.getScreenMenu(MenuIndex.ORDER));
-                    orderList.add(list.getDrinkList(select -1));// 장바구니에 선택한 리스트 넣기
                     if(option == 1){
+                        orderList.add(list.getDrinkList(select -1));// 장바구니에 선택한 리스트 넣기
                         sum += orderList.get(count).getPrice(); //장바구니에 담긴 금액 합계 더하기
                         System.out.println("장바구니에 추가되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
@@ -88,8 +88,8 @@ public class Main {
                     System.out.println(menuTest.getScreenMenu(MenuIndex.CART));
                     option = sc.nextInt();// 장바구니에 담을 것인지 아닌지 입력 받기
                     System.out.println(menuTest.getScreenMenu(MenuIndex.ORDER));
-                    orderList.add(list.getBeerList(select -1));// 장바구니에 선택한 리스트 넣기
                     if(option == 1){
+                        orderList.add(list.getBeerList(select -1));// 장바구니에 선택한 리스트 넣기
                         sum += orderList.get(count).getPrice(); //장바구니에 담긴 금액 합계 더하기
                         System.out.println("장바구니에 추가되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
