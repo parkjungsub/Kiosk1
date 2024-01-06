@@ -13,10 +13,12 @@ public class Main {
     public static void main(String[] args) {
         ScreenMenu menuTest = new ScreenMenu();
         ProductList list = new ProductList();
+        Menu menuList = new Menu();
         Scanner sc = new Scanner(System.in);
-        ArrayList<Menu> orderList = new ArrayList<Menu>();
+        ArrayList<Menu> orderList = new ArrayList<Menu>(); //장바구니
         int select;
         int count = 0;
+        double sum = 0;
 
        // orderList.add(list.getBurgerList(0));
 
@@ -35,8 +37,9 @@ public class Main {
                     System.out.println(menuTest.getScreenMenu(MenuIndex.CART));
                     select = sc.nextInt();
                     System.out.println(menuTest.getScreenMenu(MenuIndex.ORDER));
-                    orderList.add(list.getBurgerList(select));
+                    orderList.add(list.getBurgerList(option));
                     if(select == 1){
+                        sum = orderList.get(count).getPrice();
                         System.out.println("장바구니에 추가되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
                     }else if(select == 2){
@@ -53,6 +56,7 @@ public class Main {
                     System.out.println(menuTest.getScreenMenu(MenuIndex.ORDER));
                     orderList.add(list.getshakeList(select));
                     if(select == 1){
+                        orderList.add(list.getshakeList(option));
                         System.out.println("장바구니에 추가되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
                     }else if(select == 2){
@@ -69,6 +73,7 @@ public class Main {
                     System.out.println(menuTest.getScreenMenu(MenuIndex.ORDER));
                     orderList.add(list.getDrinkList(select));
                     if(select == 1){
+                        orderList.add(list.getDrinkList(option));
                         System.out.println("장바구니에 추가되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
                     }else if(select == 2){
@@ -85,6 +90,7 @@ public class Main {
                     System.out.println(menuTest.getScreenMenu(MenuIndex.ORDER));
                     orderList.add(list.getBeerList(select));
                     if(select == 1){
+                        orderList.add(list.getBeerList(option));
                         System.out.println("장바구니에 추가되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
                     }else if(select == 2){
@@ -94,7 +100,10 @@ public class Main {
                     break;
                 case 5:
                     System.out.println(menuTest.getScreenMenu(MenuIndex.ORDER));
-
+                    for(int i = 0; i < orderList.size() ;i++){
+                        System.out.println(orderList.get(i).getName()+ "     | W" +orderList.get(i).getPrice() +" | " + orderList.get(i).getExplanation());
+                    }
+                    System.out.println("[Total]"+"\nW" + sum);
                     break;
                 case 6:
                     System.out.println(menuTest.getScreenMenu(MenuIndex.ORDER_CANCEL));
@@ -104,6 +113,7 @@ public class Main {
                     }
                     break;
             }
+            count++;
         }
 
 
