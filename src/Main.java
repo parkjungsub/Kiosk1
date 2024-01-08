@@ -34,6 +34,7 @@ public class Main {
                         sum += orderList.get(count).getPrice();//장바구니에 담긴 금액 합계 더하기
                         System.out.println("장바구니에 추가되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
+                        count++;
                     }else if(option == 2){
                         System.out.println("장바구니 취소되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
@@ -51,6 +52,7 @@ public class Main {
                         sum += orderList.get(count).getPrice(); //장바구니에 담긴 금액 합계 더하기
                         System.out.println("장바구니에 추가되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
+                        count++;
                     }else if(option == 2){// 장바구니에 담을 것인지 아닌지 입력 받기
                         System.out.println("장바구니 취소되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
@@ -68,6 +70,7 @@ public class Main {
                         sum += orderList.get(count).getPrice(); //장바구니에 담긴 금액 합계 더하기
                         System.out.println("장바구니에 추가되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
+                        count++;
                     }else if(option == 2){
                         System.out.println("장바구니 취소되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
@@ -80,20 +83,17 @@ public class Main {
                     System.out.println(menuTest.getScreenMenu(MenuIndex.CART));
                     option = sc.nextInt();// 장바구니에 담을 것인지 아닌지 입력 받기
                     System.out.println(menuTest.getScreenMenu(MenuIndex.ORDER));
-
-
                     if(option == 1){  //
                         orderList.add(list.getBeerList(select -1));// 장바구니에 선택한 리스트 넣기
                         sum += orderList.get(count).getPrice(); //장바구니에 담긴 금액 합계 더하기
                         System.out.println("장바구니에 추가되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
+                        count++;
                     }else if(option == 2){
                         System.out.println("장바구니 취소되었습니다.");
                         System.out.println(menuTest.getScreenMenu(MenuIndex.MAIN));
                     }
                     break;
-
-
                 case 5: // 장바구니에 있는 목록 주문하기
                     System.out.println(menuTest.getScreenMenu(MenuIndex.ORDER));
                     for(int i = 0; i < orderList.size() ;i++){ // 장바구니 리스트 출력하기
@@ -109,7 +109,6 @@ public class Main {
                         System.out.println("주문이 취소 되었습니다.");
                 }
                     break;
-
                 case 6: //주문취소하기
                     System.out.println(menuTest.getScreenMenu(MenuIndex.ORDER_CANCEL));
                     if (option == 1){
@@ -120,9 +119,6 @@ public class Main {
                     }
                     break;
             }
-            count++;
         }
-
-
     }
 }
